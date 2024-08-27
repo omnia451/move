@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/omnia/catkin_ws/src/ctr/build/devel/setup.sh
