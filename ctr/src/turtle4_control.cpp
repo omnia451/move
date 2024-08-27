@@ -2,6 +2,7 @@
 //////////////
 #include <geometry_msgs/Twist.h>
 #include <turtlesim/Pose.h>
+
 //////////////
 #include <cmath>
 #include <signal.h>
@@ -13,7 +14,7 @@
 #define KEYCODE_L 0x61
 #define KEYCODE_U 0x77
 #define KEYCODE_D 0x73
-#define KEYCODE_Q 0x78
+#define KEYCODE_Q 0x71
 
 ////////////
 class DistanceCalculator
@@ -26,6 +27,7 @@ public:
         sub3_ = nh_.subscribe("/turtle3/pose", 10, &DistanceCalculator::pose3Callback, this);
         sub4_ = nh_.subscribe("/turtle4/pose", 10, &DistanceCalculator::pose4Callback, this);
     }
+
 
 private:
     ros::NodeHandle nh_;
@@ -88,6 +90,7 @@ private:
             ROS_INFO("Distance from turtle1: %.2f", distance1);
             ROS_INFO("Distance from turtle2: %.2f", distance2);
             ROS_INFO("Distance from turtle3: %.2f", distance3);
+
         }
     }
 };
